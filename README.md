@@ -1,16 +1,45 @@
-# React + Vite
+# Taller de Investigación y Aplicación: Fundamentos de ReactJS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto con tres ejercicios prácticos que aplican los conceptos básicos de ReactJS. La investigación teórica y las fuentes consultadas están en el documento de evidencia entregado por separado.
 
-Currently, two official plugins are available:
+## Ejercicios
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+| # | Ejercicio | Conceptos | Archivo |
+|---|-----------|-----------|---------|
+| 1 | Tarjetas de estudiantes | Componentes, JSX, props | `Ejercicio1.jsx`, `components/StudentCard.jsx` |
+| 2 | Contador de productos | `useState`, eventos, renderizado condicional | `Ejercicio2.jsx` |
+| 3 | Gestor de tareas | Listas con `map()`, `key`, estado con arreglos | `Ejercicio3.jsx` |
 
-## React Compiler
+### 1. Estudiantes
+Componente reutilizable `StudentCard` que recibe por props nombre, programa, semestre, foto y estado académico. Se muestran 5 estudiantes con el mismo componente.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Contador de productos
+Permite incrementar, disminuir y reiniciar la cantidad, sin bajar de cero. Muestra un mensaje distinto según la cantidad (0, 1 o varios). La cantidad se maneja con `useState`.
 
-## Expanding the ESLint configuration
+### 3. Gestor de tareas
+Permite agregar, eliminar y marcar tareas como completadas (se muestran tachadas) y muestra cuántas quedan pendientes. Cada tarea tiene `id`, `titulo`, `descripcion` y `completada`, y la lista se genera con `map()` usando `key`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Estructura
+
+```
+src/
+├── App.jsx
+├── Ejercicio1.jsx
+├── Ejercicio2.jsx
+├── Ejercicio3.jsx
+└── components/
+    └── StudentCard.jsx
+```
+
+## Cómo ejecutarlo
+
+```bash
+npm install
+npm run dev
+```
+
+Luego abrir http://localhost:5173/
+
+## Tecnologías
+
+React · Vite · JavaScript (JSX)
